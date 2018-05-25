@@ -9,12 +9,14 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build — env=prod"
+    "postinstall": "ng build --prod"
 
 
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "1.4.9",
+    "@angular/compiler-cli": "^4.4.7",
     "@angular/animations": "^4.4.7",
     "@angular/common": "^4.4.7",
     "@angular/compiler": "^4.4.7",
