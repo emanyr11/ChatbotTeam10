@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-
 import { ApiAiClient } from 'api-ai-javascript';
-
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
@@ -15,7 +13,6 @@ export class ChatService {
 
   readonly token = environment.dialogflow.ChatbotTeam10;
   readonly client = new ApiAiClient({ accessToken: this.token });
-
   conversation = new BehaviorSubject<Message[]>([]);
 
   constructor() {}
@@ -32,9 +29,6 @@ export class ChatService {
                   this.update(botMessage);
                });
   }
-
-
-
   // Adds message to source
   update(msg: Message) {
     this.conversation.next([msg]);
